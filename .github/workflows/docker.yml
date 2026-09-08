@@ -43,10 +43,6 @@ jobs:
           ignore-unfixed: true
           severity: CRITICAL,HIGH
 
-      # TEMPORARY: Debug GitHub OIDC claims
-      - name: Debug OIDC claims
-        uses: github/actions-oidc-debugger@main
-
       # 5. Configure AWS credentials
       - name: Configure AWS credentials
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'
